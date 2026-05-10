@@ -1,10 +1,10 @@
 # Sea Monster Crowdfunding - Web102 Prework
 
-Submitted by: **Your Name Here**
+Submitted by: **Do Quoc Khanh**
 
 **Sea Monster Crowdfunding** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded. The site provides users with comprehensive statistics, game filtering options, search functionality, and smooth navigation to explore the company's crowdfunded game portfolio.
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
@@ -28,14 +28,16 @@ The following **bonus** features are implemented:
 
 ### Core Functionality
 
-- **Game Display**: All games are displayed as cards with image, name, description, and backer count
+* **Game Display**: All games are displayed as cards with image, name, description, and backer count
+
 * **Statistics Dashboard**: Shows total contributions, total raised amount, total number of games, and top 2 funded games
 * **Filter Options**: Users can toggle between viewing all games, funded only, or unfunded only
 * **Dynamic Content**: Uses JavaScript to manipulate the DOM and display data from JSON
 
 ### Bonus Enhancements
 
-- **Search Bar**: Real-time game search filtering (case-insensitive)
+* **Search Bar**: Real-time game search filtering (case-insensitive)
+
 * **Navigation Menu**: Quick navigation links in the header with smooth scrolling
 * **Modern Design**: Gradient backgrounds, animations on hover, floating logo effect
 * **Responsive Layout**: Flexbox layouts for responsive card grids
