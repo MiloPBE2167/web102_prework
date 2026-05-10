@@ -179,7 +179,58 @@ const sortedGames = GAMES_JSON.sort((item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame, ...rest] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstGameElement = document.createElement("p");
+firstGameElement.innerHTML = firstGame.name;
+firstGameContainer.appendChild(firstGameElement);
 
 // do the same for the runner up item
+const secondGameElement = document.createElement("p");
+secondGameElement.innerHTML = secondGame.name;
+secondGameContainer.appendChild(secondGameElement);
+
+/*************************************************************************************
+ * BONUS FEATURE: Search Functionality
+ * Skills used: filter, event listeners, template literals
+*/
+
+// grab the search bar element
+const searchBar = document.getElementById("search-bar");
+
+// function to search for games by name
+function searchGames(query) {
+    deleteChildElements(gamesContainer);
+
+    // filter games based on search query (case-insensitive)
+    const searchResults = GAMES_JSON.filter((game) =>
+        game.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    // if no results found, show a message
+    if (searchResults.length === 0) {
+        const noResultsElement = document.createElement("p");
+        noResultsElement.innerHTML = "No games found matching your search. Try a different search term!";
+        noResultsElement.style.textAlign = "center";
+        noResultsElement.style.fontSize = "18px";
+        noResultsElement.style.color = "#666";
+        gamesContainer.appendChild(noResultsElement);
+    } else {
+        // add the filtered games to the page
+        addGamesToPage(searchResults);
+    }
+}
+
+// add event listener to search bar
+searchBar.addEventListener("input", (event) => {
+    const query = event.target.value;
+
+    // if search query is empty, show all games
+    if (query === "") {
+        deleteChildElements(gamesContainer);
+        addGamesToPage(GAMES_JSON);
+    } else {
+        searchGames(query);
+    }
+});
