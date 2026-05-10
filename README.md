@@ -80,10 +80,9 @@ web102_prework/
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[Watch on Loom](https://www.loom.com/share/b94afffafab54fc8b4a87e7c1984b21b)
 
-<!-- Add your GIF/Video link above -->
-GIF created with [ScreenToGif](https://www.screentogif.com/) or [Kap](https://getkap.co/)
+Video created with [Loom](https://www.loom.com/)
 
 ## Key Code Snippets
 
